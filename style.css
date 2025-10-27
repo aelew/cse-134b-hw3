@@ -1,0 +1,14 @@
+header,
+main,
+footer {
+  border: 1px solid black;
+}
+
+/* CSS-ONLY CUSTOM ELEMENT!!! */
+@media only screen and (min-width: 768px) {
+  grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
