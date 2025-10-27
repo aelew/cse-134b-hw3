@@ -1,5 +1,12 @@
 body {
-  font-family: sans-serif;
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome supplied by font author */
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
 header,
