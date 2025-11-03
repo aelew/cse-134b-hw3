@@ -1,3 +1,8 @@
+:root {
+  --background: #fff;
+  --foreground: #000;
+}
+
 h1,
 h2,
 h3,
@@ -12,6 +17,8 @@ body {
   font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome supplied by font author */
   max-width: 752px;
   margin: 0 auto;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 @supports (font-variation-settings: normal) {
@@ -23,7 +30,7 @@ body {
 header,
 main,
 footer {
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid color-mix(in oklab, var(--foreground) 25%, transparent);
 }
 
 grid-container {
@@ -34,7 +41,7 @@ grid-container {
 
 @media only screen and (min-width: 768px) {
   grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -51,7 +58,7 @@ header a {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: black;
+  color: var(--foreground);
 }
 
 header img {
@@ -90,11 +97,11 @@ section {
   article {
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: color-mix(in oklab, var(--foreground) 5%, transparent);
     position: relative;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.075);
+      background-color: color-mix(in oklab, var(--foreground) 7.5%, transparent);
     }
 
     h3 {
@@ -122,8 +129,8 @@ section-header {
 section-header a,
 project-card a {
   display: block;
-  color: white;
-  background: black;
+  color: var(--background);
+  background-color: var(--foreground);
   text-decoration: none;
   text-align: center;
   padding: 0.375rem 0.5rem;
@@ -132,14 +139,14 @@ project-card a {
   font-weight: medium;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: color-mix(in oklab, var(--foreground) 80%, transparent);
   }
 }
 
 project-card {
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: color-mix(in oklab, var(--foreground) 5%, transparent);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
