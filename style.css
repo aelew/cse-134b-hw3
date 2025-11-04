@@ -112,6 +112,7 @@ main {
 
 footer {
   padding: 0 0.75rem;
+  margin-bottom: env(safe-area-inset-bottom, 0); /* 0 = fallback value */
 }
 
 hgroup {
