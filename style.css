@@ -100,8 +100,10 @@ footer {
 }
 
 section {
-  display: grid;
-  gap: 1rem;
+  &:has(section-header) {
+    display: grid;
+    gap: 1rem;
+  }
 
   article {
     padding: 1rem;
