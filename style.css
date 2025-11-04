@@ -14,7 +14,7 @@ h6 {
 
 body {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome supplied by font author */
+  font-feature-settings: 'liga' 1, 'calt' 1, 'ss01' 1, 'cv01' 1, 'cv11' 1;
   max-width: 752px;
   margin: 0 auto;
   background-color: var(--background);
