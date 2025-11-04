@@ -29,12 +29,6 @@ body {
   }
 }
 
-header,
-main,
-footer {
-  border: 1px solid color-mix(in oklab, var(--foreground) 25%, transparent);
-}
-
 grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -53,6 +47,8 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  background: color-mix(in oklab, var(--foreground) 2.5%, transparent);
+  border-radius: 0.5rem;
 }
 
 header a {
@@ -244,4 +240,5 @@ form {
 article img {
   width: 100%;
   margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
