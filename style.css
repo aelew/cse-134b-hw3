@@ -99,7 +99,6 @@ header h1 {
 header ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -193,6 +192,26 @@ button {
   }
 }
 
+/* tablet/restrictive laptop - make more touch-friendly */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    nav {
+      margin-top: 0.25rem;
+    }
+
+    ul {
+      gap: 3rem;
+    }
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 1025px) {
+  header ul {
+    gap: 1.5rem;
+  }
+}
+
 project-card {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -243,4 +262,35 @@ article img {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle,
+.menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0.825rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .menu-toggle:checked ~ nav {
+    display: block;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 }
