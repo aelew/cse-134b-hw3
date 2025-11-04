@@ -72,11 +72,30 @@ header img {
   border-radius: 1rem;
 }
 
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 header h1 {
   font-weight: bold;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-align: center;
+
+  background: linear-gradient(to right, blue, red);
+  background-size: 500% auto;
+  animation: shine 5s ease-in-out infinite alternate;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 header ul {
