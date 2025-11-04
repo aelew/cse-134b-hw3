@@ -66,6 +66,8 @@ header a {
 
 header img {
   border-radius: 1rem;
+  border: 2px solid color-mix(in oklab, var(--background) 75%, transparent);
+  filter: drop-shadow(0 2px 3px color-mix(in oklab, var(--foreground) 25%, transparent));
 }
 
 @keyframes shine {
@@ -85,7 +87,7 @@ header h1 {
 
   background: linear-gradient(to right, blue, red);
   background-size: 500% auto;
-  animation: shine 5s ease-in-out infinite alternate;
+  animation: shine 2.5s ease-in-out infinite alternate;
 
   background-clip: text;
   -webkit-background-clip: text;
