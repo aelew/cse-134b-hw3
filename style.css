@@ -146,6 +146,7 @@ project-card a {
   padding: 0.375rem 0.5rem;
   border-radius: 0.375rem;
   font-weight: medium;
+  transition: background-color 150ms ease-in-out;
 
   &:hover {
     background-color: color-mix(in oklab, var(--foreground) 80%, transparent);
