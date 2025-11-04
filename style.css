@@ -86,7 +86,7 @@ header h1 {
   margin-bottom: 0.5rem;
   text-align: center;
 
-  background: linear-gradient(to right, blue, red);
+  background: linear-gradient(to right, dodgerblue, red);
   background-size: 500% auto;
   animation: shine 2.5s ease-in-out infinite alternate;
 
