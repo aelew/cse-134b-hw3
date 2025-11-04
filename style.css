@@ -162,8 +162,8 @@ section {
 
 section-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 section-header a,
@@ -185,8 +185,14 @@ button {
   }
 }
 
-/* text should at least 16px on small screens like phones. only update font-size on larger screens. */
 @media only screen and (min-width: 640px) {
+  section-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* text should at least 16px on small screens like phones. only update font-size on larger screens. */
   footer,
   section-header a,
   project-card a {
