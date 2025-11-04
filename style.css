@@ -309,3 +309,7 @@ article {
     margin-top: 1rem;
   }
 }
+
+audio {
+  width: 12rem;
+}
